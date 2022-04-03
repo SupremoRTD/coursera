@@ -1,0 +1,51 @@
+body {
+  font-family: Arial;
+  color: #333;
+  padding: 0px;
+  line-height: 1.5em;
+}
+
+body h1,
+body > p {
+  padding: 0 100px;
+}
+
+button {
+  padding: 10px;
+}
+
+div {
+  padding: 20px;
+}
+
+#gamecontrol,
+#score {
+  position: relative;
+  background-color: aliceblue;
+}
+
+#game {
+  background-color: #eaeaea;
+}
+#actions {
+  background-color: silver;
+}
+
+#gamecontrol,
+#game,
+#actions,
+#score {
+  text-align: center;
+  position: relative;
+}
+
+#dice-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#dice-container div {
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+}
