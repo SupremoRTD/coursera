@@ -136,6 +136,11 @@
     }
 
     checkForWin() // will update the score
+
+    // scroll to the bottom of the page since that's where the game area is
+    setTimeout(function () {
+      window.scrollTo(0, document.body.scrollHeight)
+    }, 0)
   }
 
   function checkForWin() {
