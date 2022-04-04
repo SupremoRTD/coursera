@@ -83,7 +83,7 @@
     } else {
       game.innerHTML += `
         <p>YOU HAVE PROCURED <strong>${gameData.rollSum}</strong> OFFERINGS</p>
-        <p>THEIR ARE <strong>${gameData.rollAccum}</strong> OFFERINGS READY FOR THE PIG </p>`
+        <p>THERE ARE <strong>${gameData.rollAccum}</strong> OFFERINGS READY FOR THE PIG </p>`
       actionArea.innerHTML = `
         <button id="rollagain">PROCURE MORE</button> or 
         <button id="pass">FINISH TRIBUTE</button> ?`
