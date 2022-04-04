@@ -5,7 +5,7 @@
   let score = document.getElementById('score')
   let actionArea = document.getElementById('actions')
   let gameData = {
-    dice: ['1die.jpg', '2die.jpg', '3die.jpg', '4die.jpg', '5die.jpg', '6die.jpg'],
+    dice: ['1die.png', '2die.png', '3die.png', '4die.png', '5die.png', '6die.png'],
     players: ['PLAYER 1', 'PLAYER 2'],
     score: [0, 0],
     roll1: 0,
@@ -20,7 +20,7 @@
   startGame.addEventListener('click', function () {
     gameControl.innerHTML = `
         <h2>THE PIG HAS AWAKENED<h2>
-        <button id="quit">DO YOU WISH TO SUCCUMB TO THE PIG?</button>`
+        <button id="quit">FORFEIT YOUR LIFE TO THE PIG?</button>`
     document.getElementById('quit').addEventListener('click', function () {
       window.location.reload()
     })
@@ -29,6 +29,8 @@
   })
 
   function setupTurn() {
+    actionArea.style.color = 'var(--color3)'
+    game.style.display = 'block'
     game.innerHTML = `<p><b>${gameData.players[gameData.index]}</b>, WHAT DO YOU OFFER?</p>`
     actionArea.innerHTML = '<button id="role">OFFER</button>'
     document.getElementById('role').addEventListener('click', throwDice)
@@ -43,6 +45,7 @@
 
     gameData.index ? (gameData.index = 0) : (gameData.index = 1)
     output[swapCondition] ? (game.innerHTML += output[swapCondition]) : false
+    actionArea.style.color = 'var(--color2)'
     actionArea.innerHTML = `<p><b>${gameData.players[gameData.index]}, THE PIG SUMMONS YOU.</b></p>`
     setTimeout(setupTurn, turnDelay)
   }
@@ -110,7 +113,10 @@
       return true
     } else {
       score.innerHTML = `
-        <p>PLAYER 1 TOTAL OFFERINGS: <b>${gameData.score[0]}</b> PLAYER 2 TOTAL OFFERINGS: <b>${gameData.score[1]}</b></p>`
+        <p>
+          <span>PLAYER 1 TOTAL OFFERINGS: <b>${gameData.score[0]}</b></span> 
+          <span>PLAYER 2 TOTAL OFFERINGS: <b>${gameData.score[1]}</b></span>
+        </p>`
       return false
     }
   }

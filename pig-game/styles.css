@@ -1,13 +1,26 @@
+:root {
+  --color1: #ff0000;
+  --color2: #fff;
+  --color3: #000;
+  --color4: rgba(255, 0, 0, 0.7);
+  --color5: rgba(255, 255, 255, 0.7);
+}
+
 body {
   font-family: Arial;
-  color: #333;
+  color: var(--color2);
   padding: 0px;
   line-height: 1.5em;
+  background: var(--color1) url('images/return_of_ganon_by_mcmoontloz.png') center bottom fixed no-repeat;
 }
 
 body h1,
 body > p {
   padding: 0 100px;
+}
+
+body h1 {
+  color: var(--color3);
 }
 
 button {
@@ -18,17 +31,14 @@ div {
   padding: 20px;
 }
 
-#gamecontrol,
-#score {
-  position: relative;
-  background-color: aliceblue;
+#game {
+  background-color: var(--color5);
+  color: var(--color3);
+  display: none;
 }
 
-#game {
-  background-color: #eaeaea;
-}
-#actions {
-  background-color: silver;
+#game strong {
+  color: var(--color1);
 }
 
 #gamecontrol,
@@ -37,6 +47,22 @@ div {
 #score {
   text-align: center;
   position: relative;
+}
+
+#gamecontrol,
+#game,
+#actions {
+  color: var(--color3);
+}
+
+#gamecontrol,
+#score {
+  position: relative;
+}
+
+#gamecontrol {
+  background-color: var(--color4);
+  color: var(--color3);
 }
 
 #dice-container {
@@ -50,8 +76,17 @@ div {
   display: inline-block;
 }
 
-#score p b:first-of-type::after {
+#score {
+  color: var(--color2);
+}
+
+#score p b {
+  color: var(--color1);
+}
+
+#score p span:first-of-type > b::after {
   content: ' | ';
+  color: var(--color2);
 }
 
 @media only screen and (max-width: 900px) {
@@ -62,7 +97,14 @@ div {
 
   #quit {
     font-size: 1rem;
-    width: 75%;
+  }
+
+  #quit button {
+    width: 100%;
+  }
+
+  #role button {
+    width: 100%;
   }
 
   #dice-container div {
@@ -79,11 +121,16 @@ div {
   }
 
   #score p b {
-    display: block;
+    display: inline-block;
   }
 
-  #score p b:first-of-type::after {
+  #score p span:first-of-type > b::after {
     content: '';
+  }
+
+  #score p span:first-of-type::after {
+    content: '\a';
+    white-space: pre;
   }
 }
 
@@ -92,7 +139,13 @@ div {
     display: inline;
   }
 
-  #score p b:first-of-type::after {
+  #score p span:first-of-type > b::after {
     content: ' | ';
+    color: var(--color2);
+  }
+
+  #score p span:first-of-type::after {
+    content: '';
+    white-space: normal;
   }
 }
