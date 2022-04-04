@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
   --color1: #ff0000;
   --color2: #fff;
@@ -6,8 +8,13 @@
   --color5: rgba(255, 255, 255, 0.7);
 }
 
+html,
 body {
-  font-family: Arial;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.95rem;
+}
+
+body {
   color: var(--color2);
   padding: 0px;
   line-height: 1.5em;
@@ -44,7 +51,8 @@ div {
 #gamecontrol,
 #game,
 #actions,
-#score {
+#score,
+#dice-container {
   text-align: center;
   position: relative;
 }
@@ -55,25 +63,20 @@ div {
   color: var(--color3);
 }
 
-#gamecontrol,
-#score {
-  position: relative;
-}
-
 #gamecontrol {
   background-color: var(--color4);
   color: var(--color3);
 }
 
-#dice-container {
-  position: relative;
-  overflow: hidden;
-}
-
 #dice-container div {
-  padding: 0;
+  width: 200px;
+  padding: 50px;
   overflow: hidden;
   display: inline-block;
+}
+
+#dice-container img {
+  width: 100%;
 }
 
 #score {
@@ -89,35 +92,42 @@ div {
   color: var(--color2);
 }
 
+#gameover h1 {
+  font-size: 3rem;
+}
+
+#quit {
+  max-width: 475px;
+  width: 100%;
+}
+
+#quit h1 {
+  font-size: 0.85rem;
+}
+
 @media only screen and (max-width: 900px) {
   body h1,
   body > p {
     padding: 0 25px;
   }
 
-  #quit {
-    font-size: 1rem;
-  }
-
   #quit button {
-    width: 100%;
-  }
-
-  #role button {
     width: 100%;
   }
 
   #dice-container div {
     width: 30%;
+    margin: -10px;
+    padding: 25px;
   }
 
   #dice-container div img {
-    width: 100%;
+    width: 90%;
   }
 
   #actions button {
     font-size: 0.75rem;
-    width: 40%;
+    width: 100px;
   }
 
   #score p b {
@@ -135,6 +145,10 @@ div {
 }
 
 @media only screen and (min-width: 640px) {
+  #dice-container div {
+    padding: 40px;
+  }
+
   #score p b {
     display: inline;
   }

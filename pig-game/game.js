@@ -20,7 +20,7 @@
   startGame.addEventListener('click', function () {
     gameControl.innerHTML = `
         <h2>THE PIG HAS AWAKENED<h2>
-        <button id="quit">FORFEIT YOUR LIFE TO THE PIG?</button>`
+        <button id="quit">END AWAKENING?</button>`
     document.getElementById('quit').addEventListener('click', function () {
       window.location.reload()
     })
@@ -29,7 +29,7 @@
   })
 
   function setupTurn() {
-    actionArea.style.color = 'var(--color3)'
+    actionArea.style.color = 'var(--color2)'
     game.style.display = 'block'
     game.innerHTML = `<p><b>${gameData.players[gameData.index]}</b>, WHAT DO YOU OFFER?</p>`
     actionArea.innerHTML = '<button id="role">OFFER</button>'
@@ -51,6 +51,12 @@
   }
 
   function throwDice() {
+    // will trigger a win if the player rolled again and > then win condition
+    if (gameData.rollAccum > gameData.gameEnd) {
+      gameData.score[gameData.index] += gameData.rollAccum
+      return checkForWin()
+    }
+
     actionArea.innerHTML = ''
     d1rotate = Math.floor(Math.random() * 360) + 1
     d2rotate = Math.floor(Math.random() * 360) + 1
@@ -79,7 +85,6 @@
       gameData.score[gameData.index] = 0
       gameData.rollAccum = 0
       swapPlayer('snakeEyes')
-      checkForWin() // this is used to update the score to zero
     } else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
       gameData.rollAccum = 0
       swapPlayer('oneRolled')
@@ -91,8 +96,6 @@
         <button id="rollagain">PROCURE MORE</button> or 
         <button id="pass">FINISH TRIBUTE</button> ?`
 
-      checkForWin() // will update to win if players score is > winning amount
-
       document.getElementById('rollagain').addEventListener('click', throwDice)
       document.getElementById('pass').addEventListener('click', () => {
         gameData.score[gameData.index] += gameData.rollAccum
@@ -100,6 +103,8 @@
         return !checkForWin() ? swapPlayer('passTurn') : checkForWin()
       })
     }
+
+    checkForWin() // will update the score
   }
 
   function checkForWin() {
@@ -107,9 +112,14 @@
     const currentPlayer = gameData.players[gameData.index]
 
     if (currentScore > gameData.gameEnd) {
-      score.innerHTML = `<h2>${currentPlayer} HAS PLEASE THE PIG WITH ${currentScore} OFFERINGS!</h2>`
+      score.innerHTML = `
+        <span id="gameover">
+        <h2>GAME OVER</h2>
+        <h3>${currentPlayer} HAS PLEASED THE PIG WITH ${currentScore} OFFERINGS!</h3>
+        </span>`
+      game.style.display = 'none'
       actionArea.innerHTML = ''
-      document.getElementById('quit').innerHTML = 'BEGIN TRIBUTE ONCE MORE?'
+      document.getElementById('quit').innerHTML = 'REAWAKEN THE PIG?'
       return true
     } else {
       score.innerHTML = `
