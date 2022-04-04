@@ -109,7 +109,7 @@
       return true
     } else {
       score.innerHTML = `
-        <p>PLAYER 1 TOTAL OFFERINGS: <b>${gameData.score[0]}</b> | PLAYER 2 TOTAL OFFERINGS: <b>${gameData.score[1]}</b></p>`
+        <p>PLAYER 1 TOTAL OFFERINGS: <b>${gameData.score[0]}</b> PLAYER 2 TOTAL OFFERINGS: <b>${gameData.score[1]}</b></p>`
       return false
     }
   }

@@ -49,3 +49,50 @@ div {
   overflow: hidden;
   display: inline-block;
 }
+
+#score p b:first-of-type::after {
+  content: ' | ';
+}
+
+@media only screen and (max-width: 900px) {
+  body h1,
+  body > p {
+    padding: 0 25px;
+  }
+
+  #quit {
+    font-size: 1rem;
+    width: 75%;
+  }
+
+  #dice-container div {
+    width: 30%;
+  }
+
+  #dice-container div img {
+    width: 100%;
+  }
+
+  #actions button {
+    font-size: 0.75rem;
+    width: 40%;
+  }
+
+  #score p b {
+    display: block;
+  }
+
+  #score p b:first-of-type::after {
+    content: '';
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  #score p b {
+    display: inline;
+  }
+
+  #score p b:first-of-type::after {
+    content: ' | ';
+  }
+}
