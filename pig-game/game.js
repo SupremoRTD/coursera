@@ -5,7 +5,7 @@
   let score = document.getElementById('score')
   let actionArea = document.getElementById('actions')
   let gameData = {
-    dice: ['1die.png', '2die.png', '3die.png', '4die.png', '5die.png', '6die.png'],
+    dice: ['1die.png', '2die.png', '3die.png', '4die.png', '5die.png', '6die.png', '7die.png', '8die.png', '9die.png'],
     players: ['PLAYER 1', 'PLAYER 2'],
     score: [0, 0],
     roll1: 0,
@@ -38,7 +38,7 @@
 
   function swapPlayer(swapCondition) {
     let output = {
-      snakeEyes: '<p><strong>PIG EYES. THE PIG GOD STRIPS YOU OF YOUR SCORE.</p>',
+      snakeEyes: '<p><strong>PIG EYES. THE PIG GOD STRIPS YOU OF ALL OFFERINGS.</p>',
       oneRolled: '<p>A SINGLE GLUTTONOUS ACT FORFEITS YOUR TURN.</p>',
       passTurn: false,
     }
@@ -51,19 +51,23 @@
   }
 
   function throwDice() {
+    actionArea.innerHTML = ''
+
     // will trigger a win if the player rolled again and > then win condition
     if (gameData.rollAccum > gameData.gameEnd) {
       gameData.score[gameData.index] += gameData.rollAccum
       return checkForWin()
     }
 
-    actionArea.innerHTML = ''
-    d1rotate = Math.floor(Math.random() * 360) + 1
-    d2rotate = Math.floor(Math.random() * 360) + 1
+    // calculate rolls
     gameData.roll1 = Math.floor(Math.random() * 6) + 1
     gameData.roll2 = Math.floor(Math.random() * 6) + 1
     gameData.rollSum = gameData.roll1 + gameData.roll2
     gameData.rollAccum += gameData.rollSum
+
+    // display roll results
+    let d1rotate = Math.floor(Math.random() * 360) + 1
+    let d2rotate = Math.floor(Math.random() * 360) + 1
     game.innerHTML = `
       <p><b>${gameData.players[gameData.index]}'S</b> OFFERINGS:</p>
       <div id="dice-container">
@@ -82,15 +86,42 @@
       </div>`
 
     if (gameData.rollSum === 2) {
+      // empty out total and accumulated score and swap
       gameData.score[gameData.index] = 0
       gameData.rollAccum = 0
       swapPlayer('snakeEyes')
     } else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
+      // empty accumulated score and swap
       gameData.rollAccum = 0
       swapPlayer('oneRolled')
     } else {
+      // bonus roll on double
+      let bonusRoll = null
+
+      if (gameData.roll1 === gameData.roll2) {
+        let d3rotate = Math.floor(Math.random() * 360) + 1
+        bonusRoll = Math.floor(Math.random() * 9) + 1
+
+        document.getElementById('dice-container').innerHTML += `
+        <div>
+          <img 
+            src="images/${gameData.dice[bonusRoll - 1]}" 
+            alt="${gameData.dice[bonusRoll - 1]}" 
+            style="transform: rotate(${d3rotate}deg)" />
+        </div>`
+
+        if (bonusRoll === 1) {
+          game.innerHTML += `<p><strong>BONUS OFFER FAILED</strong></p>`
+        } else {
+          gameData.rollAccum += bonusRoll
+        }
+      }
+
+      // display text results
       game.innerHTML += `
-        <p>YOU HAVE PROCURED <strong>${gameData.rollSum}</strong> OFFERINGS</p>
+        <p>YOU HAVE PROCURED <strong>${gameData.rollSum}</strong> OFFERINGS${
+        bonusRoll && bonusRoll !== 1 ? ` + <strong>${bonusRoll}</strong> ADDITIONAL` : ''
+      }</p>
         <p>THERE ARE <strong>${gameData.rollAccum}</strong> OFFERINGS READY FOR THE PIG </p>`
       actionArea.innerHTML = `
         <button id="rollagain">PROCURE MORE</button> or 
