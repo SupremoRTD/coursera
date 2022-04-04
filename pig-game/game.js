@@ -139,7 +139,11 @@
 
     // scroll to the bottom of the page since that's where the game area is
     setTimeout(function () {
-      window.scrollTo(0, document.body.scrollHeight)
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        left: 0,
+        behavior: 'smooth',
+      })
     }, 500)
   }
 
