@@ -76,6 +76,7 @@
       gameData.score[gameData.index] = 0
       gameData.rollAccum = 0
       swapPlayer('snakeEyes')
+      checkForWin() // this is used to update the score to zero
     } else if (gameData.roll1 === 1 || gameData.roll2 === 1) {
       gameData.rollAccum = 0
       swapPlayer('oneRolled')
@@ -87,7 +88,7 @@
         <button id="rollagain">PROCURE MORE</button> or 
         <button id="pass">FINISH TRIBUTE</button> ?`
 
-      checkForWin()
+      checkForWin() // will update to win if players score is > winning amount
 
       document.getElementById('rollagain').addEventListener('click', throwDice)
       document.getElementById('pass').addEventListener('click', () => {
