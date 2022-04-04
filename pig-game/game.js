@@ -54,7 +54,7 @@
     actionArea.innerHTML = ''
 
     // will trigger a win if the player rolled again and > then win condition
-    if (gameData.rollAccum > gameData.gameEnd) {
+    if (gameData.score[gameData.index] + gameData.rollAccum > gameData.gameEnd) {
       gameData.score[gameData.index] += gameData.rollAccum
       return checkForWin()
     }
@@ -140,7 +140,7 @@
     // scroll to the bottom of the page since that's where the game area is
     setTimeout(function () {
       window.scrollTo(0, document.body.scrollHeight)
-    }, 0)
+    }, 500)
   }
 
   function checkForWin() {
