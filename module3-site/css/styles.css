@@ -2,22 +2,25 @@
 
 :root {
   --chuRed: #61122f;
+  --chuDarkMaroon: #2d0916;
   --chuEmerald: #557c3e;
   --chuGold: #f6b319;
   --chuLightGray: #e7e7e7;
   --chuDarkGrey: #222;
+  --chuWhite: #fff;
+  --chuBlack: #000;
 }
 
 /***** Site Design *****/
 body {
   font-size: 16px;
-  color: #fff;
+  color: var(--chuWhite);
   background-color: var(--chuRed);
   font-family: 'Oxygen', sans-serif;
 }
 
 #header-nav {
-  background-color: #f6b319;
+  background-color: var(--chuGold);
   border-radius: 0;
   border: 0;
 }
@@ -51,7 +54,7 @@ body {
 }
 
 .navbar-brand p {
-  color: #000;
+  color: var(--chuBlack);
   text-transform: uppercase;
   font-size: 0.7em;
   margin-top: 15px;
@@ -109,8 +112,25 @@ body {
 
 .container .jumbotron {
   background-color: transparent;
-  box-shadow: 0 0 50px #230510;
-  border: 2px solid #230510;
+  box-shadow: 0 0 50px var(--chuDarkMaroon);
+  border: 2px solid var(--chuDarkMaroon);
+}
+
+#menu-tile,
+#specials-tile,
+#map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid var(--chuDarkMaroon);
+  overflow: hidden;
+}
+
+#menu-tile:hover,
+#specials-tile:hover,
+#map-tile:hover {
+  box-shadow: 0 1px 5px 1px var(--chuLightGray);
 }
 
 /***** Large Devices *****/
@@ -186,9 +206,9 @@ body {
     display: block;
     margin: 0 20px;
     padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
+    border: 2px solid var(--chuLightGray);
+    background-color: var(--chuGold);
+    color: var(--chuRed);
   }
 
   #xs-deliver {
