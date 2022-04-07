@@ -133,6 +133,29 @@ body {
   box-shadow: 0 1px 5px 1px var(--chuLightGray);
 }
 
+#menu-tile {
+  background: url('../images/menu-tile.jpg') center no-repeat;
+}
+
+#specials-tile {
+  background: url('../images/specials-tile.jpg') center no-repeat;
+}
+
+#menu-tile span,
+#specials-tile span,
+#map-tile span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--chuWhite);
+  background-color: var(--chuBlack);
+  opacity: 0.6;
+}
+
 /***** Large Devices *****/
 @media (min-width: 1200px) {
   .container .jumbotron {
@@ -225,5 +248,13 @@ body {
 
   .container .jumbotron img {
     border-radius: 6px;
+  }
+
+  #menu-tile,
+  #specials-tile,
+  #map-tile {
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto 15px;
   }
 }
