@@ -94,11 +94,70 @@ body {
 }
 
 .navbar-header button.navbar-toggle,
-.navbar-header .icon-bar {
+.navbar-header button.navbar-toggle span.icon-bar {
   border: 1px solid var(--chuRed);
+}
+
+.navbar-header button.navbar-toggle span.icon-bar {
+  background-color: var(--chuRed);
 }
 
 .navbar-header button.navbar-toggle {
   clear: left;
   margin-top: -30px;
+}
+
+/***** Large Devices *****/
+@media (min-width: 1200px) {
+}
+
+/***** Medium Devices *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+}
+
+/***** Small Devices *****/
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+}
+
+/***** Extra Small Devices *****/
+@media (max-width: 767px) {
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+
+  .navbar-brand h1 {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+
+  .navbar-brand p {
+    font-size: 0.6em;
+    margin-top: 12px;
+  }
+
+  .navbar-brand p img {
+    height: 20px;
+  }
+
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+
+  #collapsable-nav a span {
+    font-size: 1em;
+    margin-right: 5px;
+  }
 }
