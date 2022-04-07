@@ -26,11 +26,32 @@
   <body>
     <header>
       <nav id="header-nav" class="navbar navbar-expand-lg">
-        <div class="container">
-          <!-- Logo Image (navbar-header is not part of Bootstrap 5)-->
-          <a class="navbar-header" href="index.html">
-            <div id="logo-img" alt="Logo Image"></div>
-          </a>
+        <!-- 
+          1. .pull-left on div#navbar-header no longer works in Bootstrap 5 due to their use of flexbox.
+             Instead, placing justify-content-start on the container will left align the flex contents.
+        -->
+        <div class="container justify-content-start">
+          <!-- 
+            Company Logo
+              1. navbar-header is not part of Bootstrap 5
+              2. Bootstrap 5 changed .visible-{md, lg} to .d-{md, lg}-block
+              3. Added to the div rather than a to remove the full element container
+          -->
+          <div class="navbar-header d-none d-md-block d-lg-block">
+            <a href="index.html">
+              <div id="logo-img" alt="Logo Image"></div>
+            </a>
+          </div>
+          <!-- Company Name, Kosher Cert. -->
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1>David Chu's China Bistro</h1>
+            </a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification" />
+              <span>Kosher Certified</span>
+            </p>
+          </div>
         </div>
       </nav>
     </header>

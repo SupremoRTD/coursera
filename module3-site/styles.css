@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap');
+
+:root {
+  --chuRed: #61122f;
+  --chuEmerald: #557c3e;
+  --chuGold: #f6b319;
+}
 
 /***** Bootstrap Overrides *****/
 .navbar {
@@ -10,12 +16,12 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #61122f;
+  background-color: var(--chuRed);
   font-family: 'Oxygen', sans-serif;
 }
 
 #header-nav {
-  background-color: #f6b319;
+  background-color: var(--chuGold);
 }
 
 #logo-img {
@@ -23,4 +29,36 @@ body {
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
+}
+
+.navbar-brand h1 {
+  /* Company name */
+  font-family: 'Lora', serif;
+  color: var(--chuEmerald);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0.75;
+}
+
+.navbar-brand a, /* Add (.navbar-brand a) in order to remove at default */
+.navbar-brand a:hover,
+.navbar-brand a:focus {
+  text-decoration: none;
+}
+
+.navbar-brand p {
+  /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  margin-top: 15px;
+}
+
+.navbar-brand p span {
+  /* Star-K */
+  vertical-align: middle;
 }
