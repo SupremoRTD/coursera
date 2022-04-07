@@ -25,17 +25,24 @@
   </head>
   <body>
     <header>
-      <nav id="header-nav" class="navbar navbar-expand-lg">
+      <!-- 
+        Lesson adjustments
+          1. navbar-light adds color to the hamburger menu, or else the icons are transparent
+      -->
+      <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
         <!-- 
-          1. .pull-left on div#navbar-header no longer works in Bootstrap 5 due to their use of flexbox.
+          Bootstrap 5 adjustments:
+          1. .pull-left on div#navbar-header no longer works due to the use of flexbox.
              Instead, placing justify-content-start on the container will left align the flex contents.
         -->
         <div class="container justify-content-start">
           <!-- 
             Company Logo
-              1. navbar-header is not part of Bootstrap 5
-              2. Bootstrap 5 changed .visible-{md, lg} to .d-{md, lg}-block
-              3. Added to the div rather than a to remove the full element container
+            Bootstrap 5 adjustments
+              1. navbar-header is not part of the navbar component
+              2. .visible-{md, lg} to has been changed to .d-{md, lg}-block
+            Lesson adjustments
+              1. Visibility placed on div rather then a element
           -->
           <div class="navbar-header d-none d-md-block d-lg-block">
             <a href="index.html">
@@ -52,6 +59,24 @@
               <span>Kosher Certified</span>
             </p>
           </div>
+          <!-- 
+            Hamburger Menu
+            Bootstrap 5 adjustments:
+              1. span with sr-only class has been removed
+              2. data-{attr} has been changed to data-bs-{attr}
+              3. navbar-toggler-icon replaced the need for multiple icon-bar spans
+          -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsable-nav"
+            aria-controls="collapsable-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </nav>
     </header>
