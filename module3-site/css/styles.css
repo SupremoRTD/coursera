@@ -295,4 +295,17 @@ body {
     width: 100%;
     margin: 0 auto 15px;
   }
+
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  .panel-footer section hr {
+    width: 50%;
+  }
 }
