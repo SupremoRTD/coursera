@@ -194,6 +194,36 @@ footer div.row {
   margin-top: 25px;
 }
 
+.category-tile {
+  position: relative;
+  border: 2px solid var(--chuRed);
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: var(--chuBlack);
+  color: var(--chuWhite);
+  opacity: 0.8;
+}
+
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px var(--chuLightGray);
+}
+
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
+
 /***** Large Devices *****/
 @media (min-width: 1200px) {
   .container .jumbotron {
