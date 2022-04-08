@@ -124,6 +124,7 @@ body {
   margin-bottom: 15px;
   position: relative;
   border: 2px solid var(--chuDarkMaroon);
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -154,6 +155,7 @@ body {
   color: var(--chuWhite);
   background-color: var(--chuBlack);
   opacity: 0.6;
+  border-radius: 4px 4px 0 0;
 }
 
 /***** Large Devices *****/
