@@ -3,8 +3,10 @@
 :root {
   --foodLLCBlack: #000;
   --foodLLCLightGrey: #cecece;
+  --foodLLCLightGrey2: #a3a3a3;
   --foodLLCBlue: #0300ce;
   --foodLLCWhite: #fff;
+  --foodLLCGhostWhite: rgba(255, 255, 255, 0.7);
   --foodLLCBun: #fe9738;
   --foodLLCPatty: #9e5528;
   --foodLLCCheese: #fee45a;
@@ -30,8 +32,8 @@ body {
 .navbar-default {
   border: 0;
   border-radius: 0;
-  background-color: var(--foodLLCLightGrey);
-  box-shadow: 0px 0px 10px var(--foodLLCBlack);
+  background-color: var(--foodLLCGhostWhite);
+  box-shadow: 0px 0px 5px var(--foodLLCTomato);
 }
 
 .navbar-default .navbar-brand {
@@ -105,11 +107,11 @@ body {
 
 /***** Main *****/
 main {
-  background-color: var(--foodLLCWhite);
+  background-color: var(--foodLLCGhostWhite);
   padding: 10px;
   margin: 0 50px 15px 50px !important;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--foodLLCBlack);
+  box-shadow: 0px 0px 5px var(--foodLLCTomato);
 }
 
 main h1 {
@@ -149,8 +151,8 @@ main article:nth-child(3) h2 {
 main article div {
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--foodLLCLightGrey);
-  box-shadow: -1px 1px 5px var(--foodLLCBlack);
+  background-color: var(--foodLLCWhite);
+  box-shadow: -2px 2px 2px var(--foodLLCLightGrey2);
 }
 
 main article p a {
