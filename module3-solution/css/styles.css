@@ -2,9 +2,14 @@
 
 :root {
   --foodLLCBlack: #000;
-  --foodLLCLightGrey: #999;
+  --foodLLCLightGrey: #cecece;
   --foodLLCBlue: #0300ce;
   --foodLLCWhite: #fff;
+  --foodLLCBun: #fe9738;
+  --foodLLCPatty: #9e5528;
+  --foodLLCCheese: #fee45a;
+  --foodLLCLettuce: #bbec6c;
+  --foodLLCTomato: #e94444;
 }
 
 h1,
@@ -17,14 +22,16 @@ body {
   font-family: 'Varela Round', sans-serif;
   font-size: 16px;
   color: var(--foodLLCBlack);
+  background-image: url('../images/fries_sauce_pattern.jpg');
 }
 
 /***** Header *****/
 
 .navbar-default {
-  background-color: var(--foodLLCLightGrey);
-  border-bottom: 3px solid var(--foodLLCBlack);
+  border: 0;
   border-radius: 0;
+  background-color: var(--foodLLCLightGrey);
+  box-shadow: 0px 0px 10px var(--foodLLCBlack);
 }
 
 .navbar-default .navbar-brand {
@@ -35,25 +42,29 @@ body {
 }
 
 .navbar-default .navbar-brand:hover {
-  color: var(--foodLLCBlue);
+  color: var(--foodLLCBlack);
 }
 
-.navbar-default .navbar-toggle.collapsed {
-  border: 2px solid var(--foodLLCBlack);
+.navbar-default .navbar-brand span {
+  color: var(--foodLLCTomato);
+  text-shadow: -2px 0px var(--foodLLCCheese);
 }
 
-.navbar-default .navbar-toggle.collapsed .icon-bar {
-  background-color: var(--foodLLCBlack);
-  border: 2px solid var(--foodLLCBlack);
+.navbar-default .navbar-toggle.collapsed,
+.navbar-default .navbar-toggle.collapsed:focus {
+  border: none;
+  background: none;
 }
 
-.navbar-default .navbar-toggle {
-  border: 2px solid var(--foodLLCWhite);
+.navbar-default .navbar-toggle.collapsed:hover {
+  background-color: var(--foodLLCLettuce);
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: var(--foodLLCWhite);
-  border: 2px solid var(--foodLLCWhite);
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border: none;
+  background-color: var(--foodLLCLettuce);
 }
 
 .navbar-default .navbar-nav {
@@ -67,32 +78,44 @@ body {
 
 .navbar-default .navbar-nav li {
   text-align: center;
-  border-top: 2px solid var(--foodLLCBlack);
-  border-bottom: 1px solid var(--foodLLCBlack);
 }
 
-.navbar-default .navbar-nav li:last-of-type {
-  border-bottom: 0;
+.navbar-default .navbar-nav li:nth-child(1) {
+  background: var(--foodLLCCheese);
+}
+
+.navbar-default .navbar-nav li:nth-child(2) {
+  background: var(--foodLLCLettuce);
+}
+
+.navbar-default .navbar-nav li:nth-child(3) {
+  background: var(--foodLLCTomato);
 }
 
 .navbar-default .navbar-nav li a,
-.navbar-default .navbar-nav li a:focus,
-.navbar-default .navbar-nav li a:hover {
+.navbar-default .navbar-nav li a:focus {
   color: var(--foodLLCWhite) !important;
-  background-color: var(--foodLLCBlue) !important;
+  background-color: transparent !important;
+  text-shadow: -1px 1px 2px var(--foodLLCBlack);
 }
 
 .navbar-default .navbar-nav li a:hover {
-  color: var(--foodLLCBlack) !important;
-  background-color: var(--foodLLCWhite) !important;
+  background-color: var(--foodLLCBun) !important;
 }
 
 /***** Main *****/
-
+main {
+  background-color: var(--foodLLCWhite);
+  padding: 10px;
+  margin: 0 50px 0px 50px !important;
+  border-radius: 10px;
+}
 main h1 {
   font-size: 1.8em;
   font-weight: bold;
+  margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: -2px 0px var(--foodLLCCheese), -4px 0px var(--foodLLCLettuce), -6px 0px var(--foodLLCTomato);
 }
 
 main section h2 {
@@ -109,9 +132,23 @@ main article {
   padding: 5px;
 }
 
+main article:nth-child(1) h2 {
+  text-shadow: -2px 0px var(--foodLLCCheese);
+}
+
+main article:nth-child(2) h2 {
+  text-shadow: -2px 0px var(--foodLLCLettuce);
+}
+
+main article:nth-child(3) h2 {
+  text-shadow: -2px 0px var(--foodLLCTomato);
+}
+
 main article div {
   padding: 20px;
+  border-radius: 10px;
   background-color: var(--foodLLCLightGrey);
+  box-shadow: -1px 1px 5px var(--foodLLCBlack);
 }
 
 main article p a {
