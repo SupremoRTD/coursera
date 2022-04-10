@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --foodLLCBlack: #000;
+  --foodLLCLightGrey: #999;
+  --foodLLCBlue: #0300ce;
+  --foodLLCWhite: #fff;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  color: var(--foodLLCBlack);
+}
+
+/***** Header *****/
+
+.navbar-default {
+  background-color: var(--foodLLCLightGrey);
+  border-bottom: 3px solid var(--foodLLCBlack);
+  border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+  color: var(--foodLLCBlack);
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0 15px 0;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: var(--foodLLCBlue);
+}
+
+.navbar-default .navbar-toggle.collapsed {
+  border: 2px solid var(--foodLLCBlack);
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar {
+  background-color: var(--foodLLCBlack);
+  border: 2px solid var(--foodLLCBlack);
+}
+
+.navbar-default .navbar-toggle {
+  border: 2px solid var(--foodLLCWhite);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: var(--foodLLCWhite);
+  border: 2px solid var(--foodLLCWhite);
+}
+
+.navbar-default .navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-collapse {
+  border: 0;
+}
+
+.navbar-default .navbar-nav li {
+  text-align: center;
+  border-top: 2px solid var(--foodLLCBlack);
+  border-bottom: 1px solid var(--foodLLCBlack);
+}
+
+.navbar-default .navbar-nav li:last-of-type {
+  border-bottom: 0;
+}
+
+.navbar-default .navbar-nav li a,
+.navbar-default .navbar-nav li a:focus,
+.navbar-default .navbar-nav li a:hover {
+  color: var(--foodLLCWhite) !important;
+  background-color: var(--foodLLCBlue) !important;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: var(--foodLLCBlack) !important;
+  background-color: var(--foodLLCWhite) !important;
+}
+
+/***** Main *****/
+
+main h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main section h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section {
+  padding: 20px;
+}
+
+main article {
+  padding: 5px;
+}
+
+main article div {
+  padding: 20px;
+  background-color: var(--foodLLCLightGrey);
+}
+
+main article p a {
+  color: var(--foodLLCBlue);
+  text-decoration: underline;
+}
+
+/***** Media Queries *****/
+
+/***** Desktop Devices (md) *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/***** Tablet Devices (sm) *****/
+@media (min-width: 768px) and (max-width: 991px) {
+  main article {
+    margin-bottom: 15px;
+  }
+}
+
+/***** Mobile Devices (xs) *****/
+@media (max-width: 767px) {
+  main {
+    margin: 0 50px 50px 50px;
+  }
+
+  main h1 {
+    margin-bottom: 20px;
+  }
+
+  main article {
+    margin-bottom: 15px;
+  }
+}
