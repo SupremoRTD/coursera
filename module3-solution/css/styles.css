@@ -109,13 +109,14 @@ main {
   padding: 10px;
   margin: 0 50px 15px 50px !important;
   border-radius: 10px;
+  box-shadow: 0px 0px 10px var(--foodLLCBlack);
 }
 
 main h1 {
   font-size: 1.8em;
   font-weight: bold;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-shadow: -2px 0px var(--foodLLCCheese), -4px 0px var(--foodLLCLettuce), -6px 0px var(--foodLLCTomato);
 }
 
@@ -173,14 +174,14 @@ main article p a {
 /***** Mobile Devices (xs) *****/
 @media (max-width: 767px) {
   main {
-    margin: 0 50px 50px 50px;
-  }
-
-  main h1 {
-    margin-bottom: 20px;
+    margin: 0 25px 15px 25px !important;
   }
 
   main article {
     margin-bottom: 15px;
+  }
+
+  main article:last-of-type {
+    margin-bottom: 0px;
   }
 }
