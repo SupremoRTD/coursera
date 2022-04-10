@@ -107,9 +107,10 @@ body {
 main {
   background-color: var(--foodLLCWhite);
   padding: 10px;
-  margin: 0 50px 0px 50px !important;
+  margin: 0 50px 15px 50px !important;
   border-radius: 10px;
 }
+
 main h1 {
   font-size: 1.8em;
   font-weight: bold;
