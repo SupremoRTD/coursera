@@ -20,4 +20,15 @@ $(function () {
     html += '<img src="images/ajax-loader.gif"></div>'
     insertHtml(selector, html)
   }
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    showLoading('#main-content')
+    $ajaxUtils.sendGetRequest(
+      HOME_HTML,
+      function (res) {
+        document.querySelector('#main-content').innerHTML = res
+      },
+      false
+    )
+  })
 })(window)
