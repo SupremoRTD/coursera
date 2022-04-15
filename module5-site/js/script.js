@@ -6,6 +6,17 @@ $(() => {
       $('#collapsable-nav').collapse('hide')
     }
   })
+
+  // active link handler
+  const navLinks = document.querySelectorAll('#nav-list li a')
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      //remove active class
+      for (link of navLinks) link.parentNode.classList.remove('active')
+      // set active class
+      this.parentNode.classList.add('active')
+    })
+  })
 })
 
 // External Request Handlers
