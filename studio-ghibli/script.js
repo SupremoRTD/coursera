@@ -7,7 +7,7 @@
   const mainElement = document.querySelector('main')
   const loadingElement = document.querySelector('#loader')
 
-  let url = 'https://ghibliapi.herokuapp.com/'
+  let url = 'https://ghibliapi.vercel.app/'
   let dataSet = 'films'
   let data = []
   let fetching = false
