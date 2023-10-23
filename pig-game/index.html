@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of PIG</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>GAME OF PIG</h1>
+    <p>
+      There are two players. Each takes turn rolling the dice. Points are accumulated during a players turn, and can be
+      offered to THE PIG, ending the turn. Rolling double 1's will awaken THE PIG's wrath and your ALL offerings will be
+      destroyed. Rolling a single 1 will forfeit the player's offerings this turn and the next player will begin their
+      tribute. The first player to provide THE PIG 100 offerings will descend into blissful, unending filth.
+    </p>
+
+    <div id="gamecontrol">
+      <h2>THE PIG WILL DECIDE WHO SHALL PROCEED</h2>
+      <button id="startgame">BEGIN TRIBUTE</button>
+    </div>
+
+    <div id="game"></div>
+    <div id="actions"></div>
+    <div id="score"></div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

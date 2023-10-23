@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ghibli</title>
+
+    <!-- // ----- Normalize CSS for Cross Browser Consistency ---- // -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- // ----- Google Fonts ---- // -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Flavors&family=IBM+Plex+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- // ----- My Styles ---- // -->
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Studio Ghibli Films</h1>
+      <img src="images/studio-ghibli.png" alt="studio ghibli logo" />
+    </header>
+    <nav id="mainnav">
+      <ul>
+        <li><a href="#films">Films</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#species">Species</a></li>
+        <li><a href="#vehicles">Vehicles</a></li>
+      </ul>
+    </nav>
+    <nav id="filmnav">
+      <form>
+        <label for="sortorder">Sort Films By</label>
+        <select id="sortorder" disabled>
+          <option value="title">Title</option>
+          <option value="release_date">Release Date</option>
+          <option value="rt_score">Rotten Tomatos Score</option>
+        </select>
+      </form>
+    </nav>
+
+    <div id="loader">
+      <img src="images/loading.gif" alt="loading" />
+    </div>
+    <main></main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
