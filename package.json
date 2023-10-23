@@ -1,0 +1,13 @@
+{
+  "name": "coursera",
+  "version": "1.0.0",
+  "description": "Welcome to my Coursera portfolio. Below are the courses I've completed and the projects I've worked on. Please explore and feel free to check out the links.",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
