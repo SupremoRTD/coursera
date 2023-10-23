@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --foodLLCBlack: #000;
+  --foodLLCLightGrey: #cecece;
+  --foodLLCLightGrey2: #a3a3a3;
+  --foodLLCBlue: #0300ce;
+  --foodLLCWhite: #fff;
+  --foodLLCGhostWhite: rgba(255, 255, 255, 0.7);
+  --foodLLCBun: #fe9738;
+  --foodLLCPatty: #9e5528;
+  --foodLLCCheese: #fee45a;
+  --foodLLCLettuce: #bbec6c;
+  --foodLLCTomato: #e94444;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  color: var(--foodLLCBlack);
+  background-image: url('../images/fries_sauce_pattern.jpg');
+}
+
+/***** Header *****/
+
+.navbar-default {
+  border: 0;
+  border-radius: 0;
+  background-color: var(--foodLLCGhostWhite);
+  box-shadow: 0px 0px 5px var(--foodLLCTomato);
+}
+
+.navbar-default .navbar-brand {
+  color: var(--foodLLCBlack);
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0 15px 0;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: var(--foodLLCBlack);
+}
+
+.navbar-default .navbar-brand span {
+  color: var(--foodLLCTomato);
+  text-shadow: -2px 0px var(--foodLLCCheese);
+}
+
+.navbar-default .navbar-toggle.collapsed,
+.navbar-default .navbar-toggle.collapsed:focus {
+  border: none;
+  background: none;
+}
+
+.navbar-default .navbar-toggle.collapsed:hover {
+  background-color: var(--foodLLCLettuce);
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border: none;
+  background-color: var(--foodLLCLettuce);
+}
+
+.navbar-default .navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-collapse {
+  border: 0;
+}
+
+.navbar-default .navbar-nav li {
+  text-align: center;
+}
+
+.navbar-default .navbar-nav li:nth-child(1) {
+  background: var(--foodLLCCheese);
+}
+
+.navbar-default .navbar-nav li:nth-child(2) {
+  background: var(--foodLLCLettuce);
+}
+
+.navbar-default .navbar-nav li:nth-child(3) {
+  background: var(--foodLLCTomato);
+}
+
+.navbar-default .navbar-nav li a,
+.navbar-default .navbar-nav li a:focus {
+  color: var(--foodLLCWhite) !important;
+  background-color: transparent !important;
+  text-shadow: -1px 1px 2px var(--foodLLCBlack);
+}
+
+.navbar-default .navbar-nav li a:hover {
+  background-color: var(--foodLLCBun) !important;
+}
+
+/***** Main *****/
+main {
+  background-color: var(--foodLLCGhostWhite);
+  padding: 10px;
+  margin: 0 50px 15px 50px !important;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px var(--foodLLCTomato);
+}
+
+main h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: -2px 0px var(--foodLLCCheese), -4px 0px var(--foodLLCLettuce), -6px 0px var(--foodLLCTomato);
+}
+
+main section h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section {
+  padding: 20px;
+}
+
+main article {
+  padding: 5px;
+}
+
+main article:nth-child(1) h2 {
+  text-shadow: -2px 0px var(--foodLLCCheese);
+}
+
+main article:nth-child(2) h2 {
+  text-shadow: -2px 0px var(--foodLLCLettuce);
+}
+
+main article:nth-child(3) h2 {
+  text-shadow: -2px 0px var(--foodLLCTomato);
+}
+
+main article div {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--foodLLCWhite);
+  box-shadow: -2px 2px 2px var(--foodLLCLightGrey2);
+}
+
+main article p a {
+  color: var(--foodLLCBlue);
+  text-decoration: underline;
+}
+
+/***** Media Queries *****/
+
+/***** Desktop Devices (md) *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/***** Tablet Devices (sm) *****/
+@media (min-width: 768px) and (max-width: 991px) {
+  main article {
+    margin-bottom: 15px;
+  }
+}
+
+/***** Mobile Devices (xs) *****/
+@media (max-width: 767px) {
+  main {
+    margin: 0 25px 15px 25px !important;
+  }
+
+  main article {
+    margin-bottom: 15px;
+  }
+
+  main article:last-of-type {
+    margin-bottom: 0px;
+  }
+}
