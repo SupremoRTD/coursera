@@ -1,18 +1,32 @@
-# Coursera
-### HTML, CSS, and Javascript for Web Developers Assignment Repo
-Coursera coursework and projects for Steve Saldivar
+# Coursera Portfolio
 
-https://www.coursera.org/learn/html-css-javascript-for-web-developers
+Welcome to my Coursera portfolio. Below are the courses I've completed and the projects I've worked on. Please explore and feel free to check out the links.
 
-### Coursework
+## Courses
+
+### [HTML, CSS and JavaScript for Web Developers](https://www.coursera.org/learn/html-css-javascript-for-web-developers)
+
+| Coursework            | Link                                      |
+| ----------------------|-------------------------------------------|
+| 1. Module 2 Solution | [Solution Link](http://www.org.com)     |
+| 2. Module 3 Solution (including Module 3 Site) | [Solution Link](http://www.org.com) / [Site Link](http://www.org.com)  |
+| 3. Module 4 Solution | [Solution Link](http://www.org.com)     |
+| 4. Module 5 Solution (including Module 5 Site) | [Solution Link](http://www.org.com) / [Site Link](http://www.org.com)   |
 
 ### Projects
 
-[Game of Pig](https://supremortd.github.io/coding-projects/pig-game): A two player game of chance
+1. **Game of Pig**
+   - A fun two-player game of chance.
+   - [Project Link](https://supremortd.github.io/coding-projects/pig-game)
 
-[Studio Ghibli](https://supremortd.github.io/coding-projects/studio-ghibli): A page utilizing the Studio Ghibli public API
+2. **Studio Ghibli**
+   - A web page that utilizes the Studio Ghibli public API.
+   - [Project Link](https://supremortd.github.io/coding-projects/studio-ghibli)
 
-[Scription](https://supremortd.github.io/coding-projects/scription): A mock up site or a dummy organization 
+3. **Scription**
+   - A mock-up site for a fictional organization.
+   - [Project Link](https://supremortd.github.io/coding-projects/scription)
 
-[Seat Reservation](https://supremortd.github.io/coding-projects/seat-reservation): Demonstrating how a seat reservation system works
-
+4. **Seat Reservation**
+   - A demonstration of a simple seat reservation system.
+   - [Project Link](https://supremortd.github.io/coding-projects/seat-reservation)
