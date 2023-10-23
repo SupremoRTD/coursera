@@ -6,12 +6,12 @@ Welcome to my Coursera portfolio. Below are the courses I've completed and the p
 
 ### [HTML, CSS and JavaScript for Web Developers](https://www.coursera.org/learn/html-css-javascript-for-web-developers)
 
-| Coursework            | Link                                      |
+| Coursework (source link)            | Working Link                                      |
 | ----------------------|-------------------------------------------|
-| 1. Module 2 Solution | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module2-solution/)     |
-| 2. Module 3 Solution (including Module 3 Site) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module3-solution/) / [Site Link](https://supremortd.github.io/coursera/fullstack-course4/module3-site/)  |
-| 3. Module 4 Solution | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module4-solution/)     |
-| 4. Module 5 Solution (including Module 5 Site) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module5-solution/) / [Site Link](https://supremortd.github.io/coursera/fullstack-course4/module5-site/)   |
+| 1. [Module 2 Solution](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module2-solution) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module2-solution/)     |
+| 2. [Module 3 Solution](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module3-solution) (including [Module 3 Site](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module3-site)) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module3-solution/) / [Site Link](https://supremortd.github.io/coursera/fullstack-course4/module3-site/)  |
+| 3. [Module 4 Solution](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module4-solution) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module4-solution/)     |
+| 4. [Module 5 Solution](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module5-solution) (including [Module 5 Site](https://github.com/SupremoRTD/coursera/tree/main/fullstack-course4/module5-site)) | [Solution Link](https://supremortd.github.io/coursera/fullstack-course4/module5-solution/) / [Site Link](https://supremortd.github.io/coursera/fullstack-course4/module5-site/)   |
 
 ### Projects
 
