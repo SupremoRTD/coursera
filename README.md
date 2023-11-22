@@ -8,28 +8,28 @@ Welcome to my Coursera portfolio. Below are the courses I've completed and the p
 
 | Coursework (source link)                                                                                                                                                                                         | Working Link                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. [Module 2 Solution](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module2-solution)                                                                                                          | [Solution Link](https://aataxe.github.io/coursera/fullstack-course4/module2-solution/)                                                                                  |
-| 2. [Module 3 Solution](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module3-solution) (including [Module 3 Site](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module3-site)) | [Solution Link](https://aataxe.github.io/coursera/fullstack-course4/module3-solution/) / [Site Link](https://aataxe.github.io/coursera/fullstack-course4/module3-site/) |
-| 3. [Module 4 Solution](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module4-solution)                                                                                                          | [Solution Link](https://aataxe.github.io/coursera/fullstack-course4/module4-solution/)                                                                                  |
-| 4. [Module 5 Solution](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module5-solution) (including [Module 5 Site](https://github.com/aataxe/coursera/tree/main/fullstack-course4/module5-site)) | [Solution Link](https://aataxe.github.io/coursera/fullstack-course4/module5-solution/) / [Site Link](https://aataxe.github.io/coursera/fullstack-course4/module5-site/) |
+| 1. [Module 2 Solution](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module2-solution)                                                                                                          | [Solution Link](https://aatxxe.github.io/coursera/fullstack-course4/module2-solution/)                                                                                  |
+| 2. [Module 3 Solution](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module3-solution) (including [Module 3 Site](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module3-site)) | [Solution Link](https://aatxxe.github.io/coursera/fullstack-course4/module3-solution/) / [Site Link](https://aatxxe.github.io/coursera/fullstack-course4/module3-site/) |
+| 3. [Module 4 Solution](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module4-solution)                                                                                                          | [Solution Link](https://aatxxe.github.io/coursera/fullstack-course4/module4-solution/)                                                                                  |
+| 4. [Module 5 Solution](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module5-solution) (including [Module 5 Site](https://github.com/aatxxe/coursera/tree/main/fullstack-course4/module5-site)) | [Solution Link](https://aatxxe.github.io/coursera/fullstack-course4/module5-solution/) / [Site Link](https://aatxxe.github.io/coursera/fullstack-course4/module5-site/) |
 
 ### Projects
 
 1. **Game of Pig**
 
    - A fun two-player game of chance.
-   - [Project Link](https://aataxe.github.io/coursera/fullstack-course4/pig-game)
+   - [Project Link](https://aatxxe.github.io/coursera/fullstack-course4/pig-game)
 
 2. **Studio Ghibli**
 
    - A web page that utilizes the Studio Ghibli public API.
-   - [Project Link](https://aataxe.github.io/coursera/fullstack-course4/studio-ghibli)
+   - [Project Link](https://aatxxe.github.io/coursera/fullstack-course4/studio-ghibli)
 
 3. **Scription**
 
    - A mock-up site for a fictional organization.
-   - [Project Link](https://aataxe.github.io/coursera/fullstack-course4/scription)
+   - [Project Link](https://aatxxe.github.io/coursera/fullstack-course4/scription)
 
 4. **Seat Reservation**
    - A demonstration of a simple seat reservation system.
-   - [Project Link](https://aataxe.github.io/coursera/fullstack-course4/seat-reservation)
+   - [Project Link](https://aatxxe.github.io/coursera/fullstack-course4/seat-reservation)
